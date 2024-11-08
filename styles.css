@@ -1,0 +1,57 @@
+body {
+    font-family: "Kanit", sans-serif;
+    background-color: #fdb515;
+}
+
+html, body {
+    height: 100%;
+}
+
+.umbc-gold {
+    color: #fdb515;
+    color: #a67a05;
+}
+
+.red-underline {
+    text-decoration-skip-ink: none;
+    text-decoration: underline solid #da2128DD .25rem;
+}
+
+.login-header {
+    font-size: 2.5em;
+    font-style: italic;
+    font-weight: 500;
+    background-color: #F4F6FF;
+    height: 8vh;
+    min-height: 70px;
+}
+
+.header {
+    background-color: #F4F6FF;
+    height: 8vh;
+    min-height: 70px;
+}
+
+.content {
+    /* background-color: #fdb515; */
+    height: 92vh;
+}
+
+.form-login {
+    min-width: 325px;
+    height: 500px;
+    background-color: #F4F6FF;
+}
+
+@media screen and (max-width: 374px) {
+    .login-header {
+        height: 18vh;
+        text-align: center;
+    }
+    .content {
+        height: 82vh;
+    }
+    .form-login {
+        height: 600px;
+    }
+}
