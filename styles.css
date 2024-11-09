@@ -39,19 +39,52 @@ html, body {
 
 .form-login {
     min-width: 325px;
-    height: 500px;
+    height: 475px;
     background-color: #F4F6FF;
 }
 
-@media screen and (max-width: 415px) {
+.hr-with-text {
+    overflow: hidden;
+    text-align: center;
+    color: #a9a9a9;
+    font-size: 0.8rem;
+}
+
+.hr-with-text::before, .hr-with-text::after {
+    background-color: #a9a9a9;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.hr-with-text::before {
+    right: 0.5rem;
+    margin-left: -50%;
+}
+
+.hr-with-text::after {
+    left: 0.5rem;
+    margin-right: -50%;
+}
+
+@media screen and (max-width: 375px) {
     .login-header {
-        height: 18vh;
-        text-align: center;
+        font-size: 2rem;
     }
-    .content {
-        height: 82vh;
-    }
-    .form-login {
-        height: 600px;
+    .header-text {
+        padding-top: 5px;
     }
 }
+
+  /*for login icons  */
+  .x-icon {
+    height: 1rem;
+    width: 1em;
+    top: .25em;
+    position: relative;
+    float: left;
+  }
+  
