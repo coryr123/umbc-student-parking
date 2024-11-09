@@ -7,7 +7,7 @@ html, body {
     height: 100%;
 }
 
-.umbc-gold {
+.umbc-brown {
     color: #fdb515;
     color: #a67a05;
 }
@@ -43,7 +43,7 @@ html, body {
     background-color: #F4F6FF;
 }
 
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 415px) {
     .login-header {
         height: 18vh;
         text-align: center;

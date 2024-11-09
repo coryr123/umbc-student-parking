@@ -8,8 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <style>.dog-logo-header {float: left; height: 50px; object-fit: contain;}
-        @media screen and (max-width: 374px) {
+    <style>
+        .dog-logo-header {float: left; height: 50px; object-fit: contain;}
+        .word-shield-logo {object-fit: contain; height: 65px;}
+        @media screen and (max-width: 415px) {
             .dog-logo-header {
                 float: none;
                 height: 75px;
@@ -20,16 +22,36 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row d-flex">
+        <div class="row d-flex mb-4 border border-bottom border-secondary-subtle">
             <div class="col-sm-12 pt-2 shadow-sm login-header">
                 <img src="./assets/images/UMBCretrievers_JUSTHEAD-on-white-or-black.png" class="pt-3 pe-2 dog-logo-header" alt="UMBC Dog Head Logo">
-                <span class="red-underline"><span class="umbc-gold">Student</span> Parkin</span>g
+                <span class="red-underline"><span class="umbc-brown">Student</span> Parkin</span>g
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 d-flex justify-content-center align-items-center border-top border-secondary content">
-                <form class="rounded-3 shadow p-3 mb-5 bg-body-tertiary rounded form-login">
-                    <h2>Login</h2><hr>
+            <img src="./assets/images/UMBC-primary-logo-RGB.png" class="pb-4 pt-1 word-shield-logo" alt="Umbc word and shield logo">
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 d-flex justify-content-center align-items-center">
+                <form class="rounded-3 shadow p-3 mb-5 mt-2 bg-body-tertiary rounded form-login">
+                    <div class="mb-3">
+                        <h2 style="display: inline-block;" class="pe-2">Log In</h2>
+                        <p style="display: inline-block;">or</p>
+                        <a href="#" class="ms-2 fs-5 link-opacity-75-hover link-underline link-underline-opacity-0">Create an Account</a>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="student@umbc.com">
+                        <label for="floatingInput">Email or Campus ID</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <a href="#" class="ms-1 link-opacity-75-hover link-underline link-underline-opacity-0">Forgot Password?</a>
+                    <div class="d-grid ms-1 mt-3">
+                        <button type="button" class="btn btn-primary rounded-5">Sign In</button></div>
+                    <hr>
                 </form>
             </div>
         </div>
