@@ -3,42 +3,69 @@ body {
     background-color: #fdb515;
 }
 
-.umbc-brown {
-    color: #fdb515;
-    color: #a67a05;
-    color: #a9a9a9;
+.umbc-red {
     color: #da2128DD;
 }
+.umbc-white {
+    color: #F4F6FF;
+}
+.umbc-gold {
+    color: #fdb515;
+}
+.umbc-brown {
+    color: #a67a05;
+}
 
+/* ------------------------------------------------------------------------------------- */
+/* Header styling */
 .login-header {
-    font-size: 2.25em;
+    height: 60px; /* Fixed height for the header */
+    font-size: 2.25rem;
     font-style: italic;
     font-weight: 500;
-    background-color: #F4F6FF;
-    background-color: #fdb515;
-    height: 6vh;
-    min-height: 6vh;
 }
 
 .header-text-underline {
-    text-decoration-skip-ink: none;
+    /* text-decoration-skip-ink: none;
     text-decoration: underline solid #da2128DD .2rem;
-    text-decoration: underline solid #F4F6FF .1rem;
+    text-decoration: underline solid #F4F6FF .1rem; */
+    background-image: linear-gradient(to right,#F4F6FF,#fdb515);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: 100% 7%;
+    width: fit-content;
 }
-.content {
-    min-height: 70vh;
+/* bootstrap car icon */
+.bi-car-front{
+    font-size: 1.75rem;
 }
 
-.form-login {
-    min-width: 325px;
-    height: 475px;
+/* -------------------------------------------------------------------------------------- */
+/* Content Section: Fills remaining space between header and footer */
+.content-section {
+    flex-grow: 1; /* Fills space between header and footer */
+}
+
+/* Default form container behavior */
+.form-container {
+    max-width: 350px;
     background-color: #F4F6FF;
 }
 
-.login-input {
-    background-color: #fee9b9;
+/* Form input styling */
+
+.form-control:focus {
+    --bs-form-control-bg: #fff8ea;
+    border-color: #fdb515;
+    box-shadow: 0 0 0 0.25rem rgba(253, 181, 21, 0.75);
 }
-/*or between hr*/
+
+.form-control:hover {
+    /* --bs-form-control-bg: #fff8e890; */
+    border-color: #fdb515AA;
+}
+
+/* or text inside horizontal rule */
 .hr-with-text {
     overflow: hidden;
     text-align: center;
@@ -66,35 +93,6 @@ body {
     margin-right: -50%;
 }
 
-@media screen and (max-width: 500px) {
-    body {
-        background-color: #F4F6FF;
-    }
-    .login-header {
-        font-size: 2.25rem;
-        /* text-align: center; */
-        background-color: #F4F6FF;
-        border-bottom: 1px solid #d4d4d4;
-        /* height: 9vh; */
-    }
-    .header-text-underline {
-        text-decoration: underline solid #fdb515 .1rem;
-    }
-    .content {
-        /* min-height: 100vh; */
-        padding: 0;
-        margin: 0;
-    }
-    .form-login {
-        min-height: 88vh;
-        min-width: 100vw;
-    }
-    .footer {
-        border-top: 1px solid #a9a9a9;
-        min-height: 6vh;
-    }
-}
-
   /*for login icons  */
   .x-icon {
     height: 1rem;
@@ -103,4 +101,33 @@ body {
     position: relative;
     float: left;
   }
-  
+
+/* -------------------------------------------------------------------------------------- */
+/* Footer Styling */
+.login-footer {
+    max-height: 50px; /* fixed height for footer */
+}
+
+.word-shield-logo {object-fit: contain; height: 20px;}
+
+
+/* -------------------------------------------------------------------------------------- */
+/* Small screens: <=576px */
+@media screen and (max-width: 576px) {
+    body {
+        background-color: #F4F6FF;
+    }
+    .form-container {
+        height: calc(100vh - 60px - 50px); /* Form takes up all available height between header and footer */
+        max-width: none; /* Full width */
+        /* justify-content: start; */
+        overflow-y: auto;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        border-top: 1px solid #d4d4d4;
+        border-bottom: 1px solid #d4d4d4;
+    }
+    .header-text-underline {
+        background-image: linear-gradient(to right,#fdb515, #F4F6FF);
+    }
+}
