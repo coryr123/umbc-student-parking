@@ -48,14 +48,30 @@ body {
 
 /* Default form container behavior */
 .form-container {
-    max-width: 350px;
+    max-width: 375px;
     background-color: #F4F6FF;
+}
+
+/* Form link styling */
+.link {
+    --bs-link-color: #2191fb;
+    --bs-link-color-rgb: 33, 145, 251;
+    --bs-link-hover-color: #1a74c9;
+    --bs-link-hover-color-rgb: 26, 116, 201;
+    text-decoration: none !important;
+}
+
+.link:hover {
+    text-decoration: underline !important;
+    text-underline-offset: 0.25rem !important;
 }
 
 /* Form input styling */
 
 .form-control:focus {
     --bs-form-control-bg: #fff8ea;
+    /* need to explicitly set the focus styles for 
+    .form-control border/glow ring if not using scss */
     border-color: #fdb515;
     box-shadow: 0 0 0 0.25rem rgba(253, 181, 21, 0.75);
 }
@@ -64,6 +80,54 @@ body {
     /* --bs-form-control-bg: #fff8e890; */
     border-color: #fdb515AA;
 }
+
+/* custom btn-primary styling */
+.login-btn-main {
+    --bs-btn-color: #FFF;
+    --bs-btn-font-weight: 600;
+    --bs-btn-bg: #66aa44;
+    --bs-btn-border-color: #66aa44;
+
+    --bs-btn-hover-color: #FFF;
+    --bs-btn-hover-bg: #75b357;
+    --bs-btn-hover-border-color: #528836;
+
+    --bs-btn-focus-color: #FFF;
+    --bs-btn-focus-bg: #66aa44;
+    --bs-btn-focus-border-color: #528836;
+    --bs-btn-focus-shadow-rgb: 102, 170, 68; 
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), 0.5);
+
+    --bs-btn-active-color: #FFF;
+    --bs-btn-active-bg: #5c993d;
+    --bs-btn-active-border-color: #5c993d;
+}
+
+/* use custom hover styling when focused (override bootstrap behavior) */
+.login-btn-main:focus:not(:hover) {
+    background-color: var(--bs-btn-focus-bg);
+    border-color: var(--bs-btn-focus-border-color);
+    color: var(--bs-btn-focus-color);
+}
+
+.login-btn-alt {
+    --bs-btn-color: #000;
+    --bs-btn-font-weight: 500 !important;
+    --bs-btn-bg: #FFF !important;
+    --bs-btn-border-color: #cccccc;
+
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #e6e6e6;
+    --bs-btn-hover-border-color: #b3b3b3;
+
+    --bs-btn-focus-shadow-rgb: 102, 102, 102; 
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), 0.25);
+
+    --bs-btn-active-color: #FFF;
+    --bs-btn-active-bg: #000;
+    --bs-btn-active-border-color: #F4F6FF;
+}
+
 
 /* or text inside horizontal rule */
 .hr-with-text {
@@ -120,7 +184,6 @@ body {
     .form-container {
         height: calc(100vh - 60px - 50px); /* Form takes up all available height between header and footer */
         max-width: none; /* Full width */
-        /* justify-content: start; */
         overflow-y: auto;
         border-radius: 0 !important;
         box-shadow: none !important;
